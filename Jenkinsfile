@@ -1,8 +1,8 @@
 pipeline {
     agent any
     stages {
-        stage('Cleaning the cluster') {
-            /*steps {
+        /*stage('Cleaning the cluster') {
+            steps {
                 sh 'kubectl delete deployments myapp'
                 sh 'kubectl delete deployments mysqldbi'
                 sh 'kubectl delete svc mysqldb-svc'
