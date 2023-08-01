@@ -7,4 +7,17 @@ pipeline {
             sh 'kubectl delete svc myapp-svc'
         }
     }
+
+    stage('Deploying the MySQL container') {
+        steps {
+            sh 'kubectl apply -f mysql-deployment.yaml'
+        }
+    }
+
+    stage('Deploying the Web Application container') {
+        steps {
+            sh 'kubectl apply -f app-deployment.yaml'
+        }
+    }
+
 }
