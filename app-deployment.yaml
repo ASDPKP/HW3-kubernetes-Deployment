@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: swe645hw3
-          image: asdpkp/latest_hw3:v2
+          image: asdpkp/latest_hw3:latest
           ports:
             - containerPort: 8080
           env:   # Setting Enviornmental Variables
