@@ -14,12 +14,12 @@ spec:
     spec:
       containers:
         - name: swe645hw3
-          image: asdpkp/xyz:latest
+          image: asdpkp/latest_hw3:v2
           ports:
             - containerPort: 8080
           env:   # Setting Enviornmental Variables
             - name: DB_HOST   # Setting Database host address from configMap
-              value: mysqldbi
+              value: mysqldb-svc
 
             - name: DB_NAME  # Setting Database name from configMap
               value: ssdb

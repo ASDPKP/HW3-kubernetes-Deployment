@@ -63,7 +63,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: mysqldbi-svc
+  name: mysqldb-svc
   labels:
     app: mysqldbi
     tier: database
