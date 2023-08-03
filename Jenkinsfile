@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Cleaning the cluster') {
             steps {
-                sh 'kubectl delete pvc mysql-pvc -n myapp-namespace'
+                //sh 'kubectl delete pvc mysql-pvc -n myapp-namespace'
                 sh 'kubectl delete deployments myapp -n myapp-namespace'
                 sh 'kubectl delete deployments mysqldbi -n myapp-namespace'
                 sh 'kubectl delete svc mysqldb-svc -n myapp-namespace'
