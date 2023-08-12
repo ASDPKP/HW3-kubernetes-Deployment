@@ -16,13 +16,13 @@ pipeline {
 
         stage('Deploying the MySQL container') {
             steps {
-                sh 'kubectl apply -f mysql-deployment.yaml -n myapp-namespace'
+                sh 'kubectl apply -f mysql-deployment.yaml -n nginx-app-namespace'
                 }
             }
 
         stage('Deploying the Web Application container') {
             steps {
-                sh 'kubectl apply -f app-deployment.yaml -n myapp-namespace'
+                sh 'kubectl apply -f app-deployment.yaml -n nginx-app-namespace'
                 }
             }
 
