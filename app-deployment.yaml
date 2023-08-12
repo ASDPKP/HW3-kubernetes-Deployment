@@ -30,6 +30,14 @@ spec:
 
             - name: DB_PASSWORD # Setting Database password from Secret
               value: root
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 8080
+              initalDelaySeconds: 5
+              periodSeconds: 1
+
+
 ---
 
 apiVersion: v1 # Kubernetes API version
