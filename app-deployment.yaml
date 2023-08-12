@@ -17,7 +17,7 @@ spec:
         - name: swe645hw3
           image: asdpkp/latest_hw3:latest
           ports:
-            - containerPort: 8080
+            - containerPort: 80
           env:   # Setting Enviornmental Variables
             - name: DB_HOST   # Setting Database host address from configMap
               value: mysqldb-svc
@@ -44,7 +44,7 @@ spec:
     app: myapp
   ports:
     - protocol: TCP
-      port: 8080 # The port that the service is running on in the cluster
-      targetPort: 8080 # The port exposed by the service
+      port: 80 # The port that the service is running on in the cluster
+      targetPort: 80 # The port exposed by the service
   type: NodePort # type of the service.
   #loadBalancerIP: 34.86.124.111
