@@ -42,7 +42,7 @@ spec:
   selector:
     app: myapp
   ports:
-    - protocol: TCP
+    - protocol: "TCP"
       port: 80 # The port that the service is running on in the cluster
       targetPort: 80 # The port exposed by the service
   type: NodePort # type of the service.
