@@ -32,7 +32,7 @@ spec:
               value: root
           readinessProbe:
             httpGet:
-              path: /xyz
+              path: /survey
               port: 8080
             initialDelaySeconds: 5
             periodSeconds: 1
