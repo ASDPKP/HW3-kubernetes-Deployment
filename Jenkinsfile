@@ -5,10 +5,10 @@ pipeline {
             steps {
                 echo 'Hello'
                 //sh 'kubectl delete pvc mysql-pvc -n nginx-app-namespace'
-                //sh 'kubectl delete deployments myapp -n nginx-app-namespace'
-                //sh 'kubectl delete deployments mysqldbi -n nginx-app-namespace'
-                //sh 'kubectl delete svc mysqldb-svc -n nginx-app-namespace'
-                //sh 'kubectl delete svc myapp-svc -n nginx-app-namespace'
+                sh 'kubectl delete deployments myapp -n nginx-app-namespace'
+                sh 'kubectl delete deployments mysqldbi -n nginx-app-namespace'
+                sh 'kubectl delete svc mysqldb-svc -n nginx-app-namespace'
+                sh 'kubectl delete svc myapp-svc -n nginx-app-namespace'
                 //sh 'kubectl delete namespace myapp-namespace'
                 //sh 'kubectl create namespace myapp-namespace'
                 }
