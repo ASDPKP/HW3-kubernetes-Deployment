@@ -38,13 +38,12 @@ metadata: # Metadata of the resource kind we are creating
   name: myapp-svc
   namespace: myapp-namespace
   annotations:
-    cloud.google.com/neg: '{"ingress": true}'
 spec:
   selector:
     app: myapp
   ports:
     - protocol: TCP
-      port: 80 # The port that the service is running on in the cluster
+      port: 8080 # The port that the service is running on in the cluster
       targetPort: 8080 # The port exposed by the service
   type: NodePort # type of the service.
   #loadBalancerIP: 34.86.124.111
